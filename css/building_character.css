@@ -1,0 +1,237 @@
+/* Building Character */
+
+body {
+  overflow: hidden;
+  background: no-repeat url('../assets/background3.jpg');
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  height: 100vh;
+  justify-content: center;
+}
+
+aside p {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 18px;
+  color: grey;
+}
+
+.current_process {
+  color: white;
+  text-decoration: underline;
+}
+
+main {
+  padding-left: 100px;
+  font-family: 'Merriweather';
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+form section {
+  margin: 20px 45px 20px;
+}
+
+label {
+  font-size: 35px;
+}
+
+.radio {
+  font-size: 28px;
+}
+
+input {
+  margin-top: 15px;
+  padding: 10px 0 10px;
+  font-size: 20px;
+  border-width: 1px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 4px 4px 10px rgba(66,66,66,.85);
+  text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+select {
+  margin-top: 15px;
+  padding: 10px 0 10px;
+  font-size: 20px;
+  width: 100px;
+}
+
+.buttons {
+  margin: 20px 45px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  font-family: 'Merriweather';
+  background: linear-gradient(135deg, rgba(28,43,27,1) 35%, rgba(51,136,85,1) 100%);
+  color: white;
+  font-size: 35px;
+  padding: 35px;
+  cursor: pointer;
+}
+
+#step1 p {
+  text-align: center;
+  visibility: hidden;
+  margin: 80px 0 80px;
+  font-family: 'Poppins';
+  font-size: 18px;
+}
+
+/* Step 2 */
+
+#step2 {
+  display: flex;
+  flex-direction: column;
+  min-width: 70vw;
+}
+
+#characteristics {
+  display: flex;
+  justify-content: space-between;
+}
+
+#step2 div {
+  display: flex;
+  flex-direction: column;
+}
+
+#step2 h1 {
+  font-family: 'Merriweather';
+  font-size: 26px;
+}
+
+#step2 p {
+  margin: 0;
+  font-family: 'Poppins'
+}
+
+#age-modifier {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#age-modifier p {
+  font-family: 'Poppins';
+  font-size: 18px;
+  visibility: hidden;
+}
+
+#age-modifier span {
+  font-family: 'Poppins';
+  font-size: 18px;
+  visibility: hidden;
+}
+
+#age-modifier #modifiers {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 0 35px;
+}
+
+#age-modifier div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px 0 15px;
+}
+
+#age-modifier div label {
+  font-family: 'Poppins';
+  font-size: 18px;
+}
+
+#age-modifier div input {
+  font-family: 'Poppins';
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  margin-left: 10px;
+}
+
+#age-modifier-1 {
+  visibility: hidden;
+}
+
+#age-modifier-2 {
+  visibility: hidden;
+}
+
+#age-modifier-3 {
+  visibility: hidden;
+}
+
+button:disabled {
+  color: gray;
+  background-color: rgba(51,136,85,1);
+  cursor: auto;
+}
+
+/* Step 3 */
+
+#step3 {
+  display: flex;
+  flex-direction: column;
+  min-width: 70vw;
+}
+
+#step3 div {
+  display: flex;
+  flex-direction: column;
+}
+
+#step3 h1 {
+  font-family: 'Merriweather';
+  font-size: 26px;
+  padding-right: 50px;
+}
+
+#step3 p {
+  margin: 0;
+  font-family: 'Poppins'
+}
+
+#second-characteristics {
+  display: flex;
+}
+
+#second-characteristics div {
+  width: 150px;
+  margin-right: 13px;
+}
+
+#choose-occupation {
+  display: flex;
+  padding: 50px 0 50px;
+}
+
+#choose-occupation select {
+  padding: 10px;
+  width: 300px;
+  font-family: 'Poppins';
+}
+
+.occupation-description {
+  font-family: 'Poppins';
+  font-size: 18px;
+  padding: 50px 0 50px;
+}

@@ -1,0 +1,42 @@
+/* Main */
+
+body {
+  overflow: hidden;
+  background: no-repeat url('../assets/background1.png');
+}
+
+h1 {
+  font-family: 'Aladin';
+  text-align: center;
+  color: white;
+  font-size: 80px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-family: 'Poppins';
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200px;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Merriweather';
+  color: white;
+  background: linear-gradient(135deg, rgba(28,43,27,1) 35%, rgba(51,136,85,1) 100%);
+  border: 4px solid #666659;
+  font-size: 35px;
+  width: 400px;
+  text-align: center;
+  padding: 80px;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px #1c2b1b;
+}
