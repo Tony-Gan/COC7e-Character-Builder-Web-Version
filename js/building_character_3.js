@@ -204,7 +204,7 @@ const INTERPERSONAL_SKILLS = [
 const OCCUPATION_LIST = [
   ANTIQUARIAN = {
     'name': 'Antiquarian',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [30, 70],
     'skills': [
         APPRAISE,
@@ -252,7 +252,7 @@ const OCCUPATION_LIST = [
 
   AUTHOR = {
     'name': 'Author',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
         LITERATURE,
@@ -268,7 +268,7 @@ const OCCUPATION_LIST = [
 
   CLERGY = {
     'name': 'Clergy',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [9, 60],
     'skills': [
         ACCOUNTING,
@@ -316,7 +316,7 @@ const OCCUPATION_LIST = [
 
   DOCTOR_OF_MEDICINE = {
     'name': 'Doctor of Medicine',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [30, 80],
     'skills': [
         FIRST_AID,
@@ -348,7 +348,7 @@ const OCCUPATION_LIST = [
 
   ENGINEER = {
     'name': 'Engineer',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [30, 60],
     'skills': [
         TECHNICAL_DRAWING,
@@ -397,7 +397,7 @@ const OCCUPATION_LIST = [
 
   HACKER = {
     'name': 'Hacker',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [10, 70],
     'skills': [
         COMPUTER_USE,
@@ -413,7 +413,7 @@ const OCCUPATION_LIST = [
 
   JOURNALIST = {
     'name': 'Journalist',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
         PHOTOGRAPHY,
@@ -429,7 +429,7 @@ const OCCUPATION_LIST = [
 
   LAWYER = {
     'name': 'Lawyer',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [30, 80],
     'skills': [
         ACCOUNTING,
@@ -445,7 +445,7 @@ const OCCUPATION_LIST = [
 
   LIBRARIAN = {
     'name': 'Librarian',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [9, 35],
     'skills': [
         ACCOUNTING,
@@ -477,7 +477,7 @@ const OCCUPATION_LIST = [
 
   MISSIONARY = {
     'name': 'Missionary',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [0, 30],
     'skills': [
         ART_CRAFT_SKILLS,
@@ -509,7 +509,7 @@ const OCCUPATION_LIST = [
 
   PARAPSYCHOLOGIST = {
     'name': 'Parapsychologist',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
         ANTHROPOLOGY,
@@ -590,7 +590,7 @@ const OCCUPATION_LIST = [
 
   PROFESSOR = {
     'name': 'Professor',
-    'occupation_points': ['edu', 4],
+    'occupation_points': [['edu', 4],],
     'credit_rating': [20, 70],
     'skills': [
         LIBRARY_USE,
@@ -818,7 +818,8 @@ build.innerHTML = buildValue
 damageBonus.innerHTML = damageBonusValue
 
 // Occupation Details
-var occupationDetails = document.querySelector('.occupation-description')
+var occupationDetails = document.querySelector('.occupation-description-one')
+var occupationDetailsP = document.querySelector('.occupation-description-two')
 var occupationDropdown = document.getElementById('occupation')
 occupationDropdown.addEventListener('change', event => {
   var occupationName;
@@ -827,7 +828,7 @@ occupationDropdown.addEventListener('change', event => {
   var occupationPoints;
   OCCUPATION_LIST.forEach(element => {
     if (element['name'] == occupationDropdown.value) {
-      occupationName = occupationDropdown.value
+      occupationName = element['name']
       occupationCredit = element['credit_rating']
       occupationSkills = element['skills']
       if (element['occupation_points'].length == 1) {
@@ -835,7 +836,7 @@ occupationDropdown.addEventListener('change', event => {
       } else {
         var c1 = localStorage.getItem(element['occupation_points'][1][0])
         var c2 = localStorage.getItem(element['occupation_points'][1][1])
-        if (parseInt(c1) > parlenseInt(c2)) {
+        if (parseInt(c1) > parseInt(c2)) {
           occupationPoints = ['EDU', element['occupation_points'][1][0].toUpperCase()]
         } else {
           occupationPoints = ['EDU', element['occupation_points'][1][1].toUpperCase()]
@@ -843,13 +844,93 @@ occupationDropdown.addEventListener('change', event => {
       }
     }
   });
-  var information1 = `${occupationName}, with credit rating ranged from ${occupationCredit[0]} to ${occupationCredit[1]}`
+  var information1 = `${occupationName}, with credit rating ranged from ${occupationCredit[0]} to ${occupationCredit[1]}.\n`
   var information2;
-  if ((occupationPoints).length == 1) {
-    var information2 = `Personally for you, the occupation skill points of ${occupationName} is decided by ${occupationPoints}`
+  if (typeof(occupationPoints) == typeof('EDU')) {
+    var information2 = `Personally for you, the occupation skill points of ${occupationName} is decided by ${occupationPoints}.\n`
   } else {
-    var information2 = `Personally for you, the occupation skill points of ${occupationName} is decided by ${occupationPoints[0]} and ${occupationPoints[1]}`
+    var information2 = `Personally for you, the occupation skill points of ${occupationName} is decided by ${occupationPoints[0]} and ${occupationPoints[1]}.\n`
   }
   
-  occupationDetails.innerHTML = information1
+  occupationDetails.innerHTML = information1 + information2
+  if (typeof(occupationSkills[0]) == typeof(ACCOUNTING)) {
+    document.getElementById('skill1').innerHTML = occupationSkills[0]
+  } else {
+    for (let index = 0; index < occupationSkills[0].length; index++) {
+      if (typeof(occupationSkills[0][index]) != typeof(ACCOUNTING)) {
+        occupationSkills[0][index] = occupationSkills[0][index].join(', ')
+      }
+    }
+    document.getElementById('skill1').innerHTML = occupationSkills[0].join(', ')
+  }
+  if (typeof(occupationSkills[1]) == typeof(ACCOUNTING)) {
+    document.getElementById('skill2').innerHTML = occupationSkills[1]
+  } else {
+    for (let index = 0; index < occupationSkills[1].length; index++) {
+      if (typeof(occupationSkills[1][index]) != typeof(ACCOUNTING)) {
+        occupationSkills[1][index] = occupationSkills[1][index].join(', ')
+      }
+    }
+    document.getElementById('skill2').innerHTML = occupationSkills[1].join(', ')
+  }
+  if (typeof(occupationSkills[2]) == typeof(ACCOUNTING)) {
+    document.getElementById('skill3').innerHTML = occupationSkills[2]
+  } else {
+    for (let index = 0; index < occupationSkills[2].length; index++) {
+      if (typeof(occupationSkills[2][index]) != typeof(ACCOUNTING)) {
+        occupationSkills[2][index] = occupationSkills[2][index].join(', ')
+      }
+    }
+    document.getElementById('skill3').innerHTML = occupationSkills[2].join(', ')
+  }
+  if (typeof(occupationSkills[3]) == typeof(ACCOUNTING)) {
+    document.getElementById('skill4').innerHTML = occupationSkills[3]
+  } else {
+    for (let index = 0; index < occupationSkills[3].length; index++) {
+      if (typeof(occupationSkills[3][index]) != typeof(ACCOUNTING)) {
+        occupationSkills[3][index] = occupationSkills[3][index].join(', ')
+      }
+    }
+    document.getElementById('skill4').innerHTML = occupationSkills[3].join(', ')
+  }
+  if (typeof(occupationSkills[4]) == typeof(ACCOUNTING)) {
+    document.getElementById('skill5').innerHTML = occupationSkills[4]
+  } else {
+    for (let index = 0; index < occupationSkills[4].length; index++) {
+      if (typeof(occupationSkills[4][index]) != typeof(ACCOUNTING)) {
+        occupationSkills[4][index] = occupationSkills[4][index].join(', ')
+      }
+    }
+    document.getElementById('skill5').innerHTML = occupationSkills[4].join(', ')
+  }
+  if (typeof(occupationSkills[5]) == typeof(ACCOUNTING)) {
+    document.getElementById('skill6').innerHTML = occupationSkills[5]
+  } else {
+    for (let index = 0; index < occupationSkills[5].length; index++) {
+      if (typeof(occupationSkills[5][index]) != typeof(ACCOUNTING)) {
+        occupationSkills[5][index] = occupationSkills[5][index].join(', ')
+      }
+    }
+    document.getElementById('skill6').innerHTML = occupationSkills[5].join(', ')
+  }
+  if (typeof(occupationSkills[6]) == typeof(ACCOUNTING)) {
+    document.getElementById('skill7').innerHTML = occupationSkills[6]
+  } else {
+    for (let index = 0; index < occupationSkills[6].length; index++) {
+      if (typeof(occupationSkills[6][index]) != typeof(ACCOUNTING)) {
+        occupationSkills[6][index] = occupationSkills[6][index].join(', ')
+      }
+    }
+    document.getElementById('skill7').innerHTML = occupationSkills[6].join(', ')
+  }
+  if (typeof(occupationSkills[7]) == typeof(ACCOUNTING)) {
+    document.getElementById('skill8').innerHTML = occupationSkills[7]
+  } else {
+    for (let index = 0; index < occupationSkills[7].length; index++) {
+      if (typeof(occupationSkills[7][index]) != typeof(ACCOUNTING)) {
+        occupationSkills[7][index] = occupationSkills[7][index].join(', ')
+      }
+    }
+    document.getElementById('skill8').innerHTML = occupationSkills[7].join(', ')
+  }
 })
