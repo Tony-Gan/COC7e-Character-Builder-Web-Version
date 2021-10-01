@@ -8,3 +8,8 @@ button1.addEventListener('click', event => {
 button2.addEventListener('click', event => {
   alert('Unavailable now.')
 });
+
+const languageButton = document.getElementById('language-setting')
+languageButton.addEventListener('click', event => {
+  alert('没来得及做呢，要不你帮我翻译。')
+})
