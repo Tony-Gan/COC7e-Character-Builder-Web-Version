@@ -50,17 +50,17 @@ form section {
 }
 
 label {
-  font-size: 35px;
+  font-size: 24px;
 }
 
 .radio {
-  font-size: 28px;
+  font-size: 20px;
 }
 
 input {
   margin-top: 15px;
   padding: 10px 0 10px;
-  font-size: 20px;
+  font-size: 16px;
   border-width: 1px;
   border-color: #CCCCCC;
   background-color: #FFFFFF;
@@ -74,23 +74,25 @@ input {
 select {
   margin-top: 15px;
   padding: 10px 0 10px;
-  font-size: 20px;
+  font-size: 16px;
   width: 100px;
 }
 
 .buttons {
   margin: 20px 45px 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 button {
   font-family: 'Merriweather';
   background: linear-gradient(135deg, rgba(28,43,27,1) 35%, rgba(51,136,85,1) 100%);
   color: white;
-  font-size: 35px;
-  padding: 35px;
+  font-size: 20px;
+  padding: 20px;
+  margin: 0 10% 0;
   cursor: pointer;
+  width: 20%;
 }
 
 #step1 p {
@@ -122,7 +124,7 @@ button {
 
 #step2 h1 {
   font-family: 'Merriweather';
-  font-size: 26px;
+  font-size: 22px;
 }
 
 #step2 p {
@@ -138,13 +140,13 @@ button {
 
 #age-modifier p {
   font-family: 'Poppins';
-  font-size: 18px;
+  font-size: 16px;
   visibility: hidden;
 }
 
 #age-modifier span {
   font-family: 'Poppins';
-  font-size: 18px;
+  font-size: 16px;
   visibility: hidden;
 }
 
@@ -158,17 +160,17 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 15px 0 15px;
+  margin: 16px 0 16px;
 }
 
 #age-modifier div label {
   font-family: 'Poppins';
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #age-modifier div input {
   font-family: 'Poppins';
-  font-size: 18px;
+  font-size: 16px;
   padding: 0;
   margin: 0;
   width: 50px;
@@ -209,7 +211,7 @@ button:disabled {
 
 #step3 h1 {
   font-family: 'Merriweather';
-  font-size: 26px;
+  font-size: 22px;
   padding-right: 50px;
 }
 
@@ -240,7 +242,7 @@ button:disabled {
 
 .occupation-description-one {
   font-family: 'Poppins';
-  font-size: 18px;
+  font-size: 16px;
   padding: 30px 0 30px;
   word-wrap: normal;
   width: 90%;
@@ -248,7 +250,7 @@ button:disabled {
 
 .occupation-description-two {
   font-family: 'Poppins';
-  font-size: 18px;
+  font-size: 16px;
   padding: 0 0 20px;
   word-wrap: normal;
   width: 90%;
@@ -258,11 +260,12 @@ button:disabled {
   font-family: 'Poppins';
   font-size: 16px;
   font-weight: 300;
+  padding: 4px 0 4px;
 }
 
 .step3-instruction {
   font-family: 'Poppins';
-  font-size: 18px;
+  font-size: 16px;
   word-wrap: normal;
   width: 1200px;
   padding-bottom: 10px;
