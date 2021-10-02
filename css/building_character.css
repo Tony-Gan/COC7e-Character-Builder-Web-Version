@@ -260,13 +260,14 @@ button:disabled {
 
 #step3 li {
   font-family: 'Poppins';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   padding: 3px 0 3px;
 }
 
 #step3 ol {
-  margin:0%
+  margin:0;
+  padding-left: 25px;
 }
 
 .step3-instruction {

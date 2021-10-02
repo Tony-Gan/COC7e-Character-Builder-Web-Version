@@ -1,9 +1,9 @@
 const d6 = () => {
-  return Math.floor(Math.random() * 7)
+  return Math.floor(Math.random() * 6) + 1
 }
 
 const d4 = () => {
- return Math.floor(Math.random() * 5)
+ return Math.floor(Math.random() * 4) + 1
 }
 
 const str = document.getElementById('str')
