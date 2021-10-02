@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/chinese_version/building_character_chinese.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <title>克苏鲁的呼唤第七版 | 角色构筑工具</title>
+  </head>
+
+<body>
+  
+  <aside>
+    <p>基础属性</p>
+    <p>年龄设置</p>
+    <p class="current_process">职业设置</p>
+    <p>职业技能</p>
+    <p>个人技能</p>
+    <p>背景设置</p>
+    <p>携带物品</p>
+    <p>其他设置</p>
+    <p>生成图表</p>
+  </aside>
+
+  <main id="step3">
+    <section id="characteristics">
+      <div>
+        <h3>STR</h3>
+        <p id="str">0</p>
+      </div>
+      <div>
+        <h3>CON</h3>
+        <p id="con">0</p>
+      </div>
+      <div>
+        <h3>DEX</h3>
+        <p id="dex">0</p>
+      </div>
+      <div>
+        <h3>INT</h3>
+        <p id="int">0</p>
+      </div>
+      <div>
+        <h3>SIZ</h3>
+        <p id="siz">0</p>
+      </div>
+      <div>
+        <h3>POW</h3>
+        <p id="pow">0</p>
+      </div>
+      <div>
+        <h3>APP</h3>
+        <p id="app">0</p>
+      </div>
+      <div>
+        <h3>EDU</h3>
+        <p id="edu">0</p>
+      </div>
+      <div>
+        <h3>LUC</h3>
+        <p id="luc">0</p>
+      </div>
+    </section>
+    <section id="choose-occupation">
+      <h1>请选择你的职业：</h1>
+      <section>
+        <select name="occupation" id="occupation">
+          <option value='古董收藏家'>古董收藏家</option>
+          <option value='艺术家'>艺术家</option>
+          <option value='运动员'>运动员</option>
+          <option value='作家'>作家</option>
+          <option value='神职人员'>神职人员</option>
+          <option value='罪犯'>罪犯</option>
+          <option value='业余艺术爱好者'>业余艺术爱好者</option>
+          <option value='医生'>医生</option>
+          <option value='流浪汉'>流浪汉</option>
+          <option value='工程师'>工程师</option>
+          <option value='艺人'>艺人</option>
+          <option value='农民'>农民</option>
+          <option value='黑客'>黑客</option>
+          <option value='记者'>记者</option>
+          <option value='律师'>律师</option>
+          <option value='图书馆管理员'>图书馆管理员</option>
+          <option value='军官'>军官</option>
+          <option value='传教士'>传教士</option>
+          <option value='音乐家'>音乐家</option>
+          <option value='超心理学家'>超心理学家</option>
+          <option value='飞行员'>飞行员</option>
+          <option value='警探'>警探</option>
+          <option value='警察'>警察</option>
+          <option value='私家侦探'>私家侦探</option>
+          <option value='教授'>教授</option>
+          <option value='士兵'>士兵</option>
+          <option value='部落成员'>部落成员</option>
+          <option value='狂热者'>狂热者</option>
+        </select>
+      </section>
+    </section>
+    <p class="occupation-description-one"><span class="o-name">古董收藏家</span>，信誉范围为<span class="credit">30</span>至<span class="credit">70</span>。根据你当前的属性，古董收藏家的职业技能点将取决于<span class="char">EDU</span></p>
+    <p class="occupation-description-two">以下将是你的职业技能表，你必须将<span style="color: greenyellow; font-weight: 700;">所有的</span>职业技能点分配在<span style="color: greenyellow; font-weight: 700;">信誉</span>以及下列的技能中。一行中若包含多个技能则意味着你需要从中选出一个进行技能点分配，<span style="color: greenyellow; font-weight: 700;">其他任意技能</span>意味着你能够选择任意一个技能进行职业技能点分配</p>
+    <ol>
+      <li id="skill1">估价</li>
+      <li id="skill2">表演，农学，美术，锻造，乐器，文学，摄影，机械制图</li>
+      <li id="skill3">历史</li>
+      <li id="skill4">图书馆使用</li>
+      <li id="skill5">拉丁语，希伯来语，其他外语</li>
+      <li id="skill6">魅惑，话术，恐吓，说服</li>
+      <li id="skill7">侦察</li>
+      <li id="skill8">其他任意技能</li>
+    </ol>
+    <p class="step3-instruction">点击“职业详情”可以查看职业列表，点击“下一步”将会选择当前职业</p>
+    <section class="buttons">
+      <button class="button5">职业详情</button>
+      <button class="button6">下一步</button>
+    </section>
+  </main>
+
+</body>
+
+<script src="../js/chinese_version/building_character_3_chinese.js"></script>
+
+</html>

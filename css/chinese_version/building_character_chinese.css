@@ -2,7 +2,7 @@
 
 body {
   overflow: hidden;
-  background: no-repeat url('../assets/background3.jpg');
+  background: no-repeat url('../../assets/background3.jpg');
   display: flex;
   flex-direction: row;
   background-size: cover;
@@ -19,7 +19,7 @@ aside {
 }
 
 aside p {
-  font-family: 'Poppins';
+  font-family: 'Noto Serif SC', serif;
   font-weight: 300;
   font-size: 14px;
   color: grey;
@@ -31,7 +31,7 @@ aside p {
 }
 
 main {
-  font-family: 'Merriweather';
+  font-family: 'Noto Serif SC', serif;
   color: white;
 }
 
@@ -87,7 +87,7 @@ select {
 }
 
 button {
-  font-family: 'Merriweather';
+  font-family: 'ZCOOL XiaoWei', serif;
   background: linear-gradient(135deg, rgba(28,43,27,1) 35%, rgba(51,136,85,1) 100%);
   color: white;
   font-size: 20px;
@@ -126,13 +126,13 @@ button {
 }
 
 #step2 h1 {
-  font-family: 'Merriweather';
+  font-family: 'Noto Serif SC', serif;
   font-size: 22px;
 }
 
 #step2 p {
   margin: 0;
-  font-family: 'Poppins'
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #age-modifier {
@@ -142,13 +142,14 @@ button {
 }
 
 #age-modifier p {
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   visibility: hidden;
+  padding: 10px 0 10px;
 }
 
 #age-modifier span {
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   visibility: hidden;
 }
@@ -167,12 +168,12 @@ button {
 }
 
 #age-modifier div label {
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
 }
 
 #age-modifier div input {
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0;
@@ -213,14 +214,14 @@ button:disabled {
 }
 
 #step3 h1 {
-  font-family: 'Merriweather';
+  font-family: 'Noto Serif SC', serif;
   font-size: 22px;
-  padding-right: 50px;
+  padding-right: 25px;
 }
 
 #step3 p {
   margin: 0;
-  font-family: 'Poppins'
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #second-characteristics {
@@ -240,11 +241,11 @@ button:disabled {
 #choose-occupation select {
   padding: 10px;
   width: 300px;
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;;
 }
 
 .occupation-description-one {
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;;
   font-size: 16px;
   padding: 5px 0 5px;
   word-wrap: normal;
@@ -252,7 +253,7 @@ button:disabled {
 }
 
 .occupation-description-two {
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;;
   font-size: 16px;
   padding: 5px 0 5px;
   word-wrap: normal;
@@ -260,7 +261,7 @@ button:disabled {
 }
 
 #step3 li {
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;;
   font-size: 14px;
   font-weight: 300;
   padding: 3px 0 3px;
@@ -272,11 +273,11 @@ button:disabled {
 }
 
 .step3-instruction {
-  font-family: 'Poppins';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;;
   font-size: 16px;
   word-wrap: normal;
   width: 1200px;
-  padding-bottom: 10px;
+  padding: 10px 0 10px;
 }
 
 .occupation-description-one .credit {

@@ -5,46 +5,46 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/building_character.css">
-  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/chinese_version/building_character_chinese.css">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Merriweather:wght@300;400;700;900&family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-  <title>Call of Cthulhu 7 Edition | Character Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <title>克苏鲁的呼唤第七版 | 角色构筑工具</title>
 </head>
 
 <body>
   
   <aside>
-    <p class="current_process">Basic Information</p>
-    <p>Applying Age Modifier</p>
-    <p>Selecting Occupation</p>
-    <p>Allocating Occupational Points</p>
-    <p>Allocating Personal Points</p>
-    <p>Setup Background</p>
-    <p>Deciding Equipment</p>
-    <p>Other Setting</p>
-    <p>Finish</p>
+    <p class="current_process">基础属性</p>
+    <p>年龄设置</p>
+    <p>职业设置</p>
+    <p>职业技能</p>
+    <p>个人技能</p>
+    <p>背景设置</p>
+    <p>携带物品</p>
+    <p>其他设置</p>
+    <p>生成图表</p>
   </aside>
 
   <main id="step1">
 
     <form>
       <section>
-        <label for="name">What is your name?</label><br><br>
+        <label for="name">你叫什么名字？</label><br><br>
         <input type="text" name="name" id="name">
       </section>
       <section>
-        <label>Are you male or female?</label><br><br>
+        <label>你的性别是？</label><br><br>
         <input type="radio" id="male" value="male" name="gender">
-        <label for="male" class="radio">Male</label><br>
+        <label for="male" class="radio">男性</label><br>
         <input type="radio" id="female" value="female" name="gender">
-        <label for="female" class="radio">Female</label><br>
+        <label for="female" class="radio">女性</label><br>
         <input type="radio" id="unisex" value="unisex" name="unisex">
-        <label for="unisex" class="radio">Other</label><br>
+        <label for="unisex" class="radio">中性</label><br>
       </section>
       <section>
-        <label for="age">How old are you?</label><br><br>
+        <label for="age">你的年龄是？</label><br><br>
         <select name="age" id="age">
           <option value='15'>15</option>
           <option value='16'>16</option>
@@ -128,14 +128,14 @@
     <p>You are no one.</p>
 
     <section class="buttons">
-      <button class="button1">Get Description</button>
-      <button class="button2">Next Step</button>
+      <button class="button1">应用选项</button>
+      <button class="button2">下一步</button>
     </section>
 
   </main>
 
 </body>
 
-<script src="./js/building_character_1.js"></script>
+<script src="../js/chinese_version/building_character_1_chinese.js"></script>
 
 </html>

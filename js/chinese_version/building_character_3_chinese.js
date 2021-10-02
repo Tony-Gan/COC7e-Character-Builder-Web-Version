@@ -41,102 +41,102 @@ app.innerHTML = localStorage.getItem('app')
 edu.innerHTML = localStorage.getItem('edu')
 luc.innerHTML = localStorage.getItem('luc')
 
-const ACCOUNTING = 'Accounting'
-const ANIMAL_HANDLING = 'Animal handling'
-const ANTHROPOLOGY = 'Anthropology'
-const APPRAISE = 'Appraise'
-const ART_CRAFT = 'Art and craft'
-const ARTILLERY = 'Artillery'
-const CHARM = 'Charm'
-const CLIMB = 'Climb'
-const COMPUTER_USE = 'Computer use'
-const CREDIT_RATING = 'Credit rating'
-const CTHULHU_MYTHOS = 'Cthulhu mythos'
-const DEMOLITIONS = 'Demolitions'
-const DISGUISE = 'Disguise'
-const DIVING = 'Diving'
-const DODGE = 'Dodge'
-const DRIVE_AUTO = 'Drive auto'
-const ELECTRICAL_REPAIR = 'Electrical repair'
-const ELECTRONICS = 'Electronics'
-const FAST_TALK = 'Fast talk'
-const FIGHTING = 'Fighting'
-const FIREARMS = 'Firearms'
-const FIRST_AID = 'First aid'
-const HISTORY = 'History'
-const HYPNOSIS = 'Hypnosis'
-const INTIMIDATE = 'Intimidate'
-const JUMP = 'Jump'
-const LANGUAGE_OTHER = 'Language(other)'
-const LANGUAGE_OWN = 'Language(own)'
-const LAW = 'Law'
-const LIBRARY_USE = 'Library use'
-const LISTEN = 'Listen'
-const LOCKSMITH = 'Locksmith'
-const LORE = 'Lore'
-const MECHANICAL_REPAIR = 'Mechanical repair'
-const MEDICINE = 'Medicine'
-const NATURAL_WORLD = 'Natural world'
-const NAVIGATION = 'Navigation'
-const OCCULT = 'Occult'
-const OPERATE_HEAVY_MACHINERY = 'Heavy machinery'
-const PERSUADE = 'Persuade'
-const PILOT = 'Pilot'
-const PSYCHOANALYSIS = 'Psychoanalysis'
-const PSYCHOLOGY = 'Psychology'
-const READ_LIPS = 'Read lips'
-const RIDE = 'Ride'
-const SCIENCE = 'Science'
-const SLEIGHT_OF_HAND = 'Sleight of hand'
-const SPOT_HIDDEN = 'Spot hidden'
-const STEALTH = 'Stealth'
-const SURVIVAL = 'Survival'
-const SWIM = 'Swim'
-const THROW = 'Throw'
-const TRACK = 'Track'
-const ACTING = 'Acting'
-const ASTRONOMY = 'Astronomy'
-const AXE = 'Axe'
-const BIOLOGY = 'Biology'
-const BOTANY = 'Botany'
-const BOW = 'Bow'
-const BRAWL = 'Brawl'
-const CHAINSAW = 'Chainsaw'
-const CHEMISTRY = 'Chemistry'
-const CRYPTOGRAPHY = 'Cryptography'
-const ENGINEERING = 'Engineering'
-const FINE_ART = 'Fine art'
-const FLAIL = 'Flail'
-const FLAMETHROWER = 'Flamethrower'
-const FORENSICS = 'Forensics'
-const FORGERY = 'Forgery'
-const GARROTE = 'Garrote'
-const GEOLOGY = 'Geology'
-const HANDGUN = 'Handgun'
-const HEAVY_WEAPONS = 'Heavy weapons'
-const MACHINE_GUN = 'Machine gun'
-const MATHEMATICS = 'Mathematics'
-const METEOROLOGY = 'Meteorology'
-const PHARMACY = 'Pharmacy'
-const PHOTOGRAPHY = 'Photography'
-const PHYSICS = 'Physics'
-const RIFLE = 'Rifle'
-const SHOTGUN = 'Shotgun'
-const SPEAR = 'Spear'
-const SUBMACHINE_GUN = 'Submachine gun'
-const SWORD = 'Sword'
-const WHIP = 'Whip'
-const ZOOLOGY = 'Zoology'
-const LITERATURE = 'Literature'
-const LATIN = 'Latin'
-const HEBREW = 'Hebrew'
-const NON_OWN_LANGUAGE = 'Other language'
-const FARMING = 'Farming'
-const TECHNICAL_DRAWING = 'Technical drawing'
-const INSTRUMENT = 'Instrument'
-const PILOT_AIRCRAFT = 'Pilot aircraft'
-const PILOT_BOAT = 'Pilot boat'
-const OTHER = 'Any Other Skill'
+const ACCOUNTING = '会计'
+const ANIMAL_HANDLING = '动物驯养'
+const ANTHROPOLOGY = '人类学'
+const APPRAISE = '估价'
+const ART_CRAFT = '艺术与手艺'
+const ARTILLERY = '炮术'
+const CHARM = '魅惑'
+const CLIMB = '攀爬'
+const COMPUTER_USE = '计算机使用'
+const CREDIT_RATING = '信誉'
+const CTHULHU_MYTHOS = '克苏鲁神话'
+const DEMOLITIONS = '爆破'
+const DISGUISE = '乔装'
+const DIVING = '潜水'
+const DODGE = '闪避'
+const DRIVE_AUTO = '汽车驾驶'
+const ELECTRICAL_REPAIR = '电气维修'
+const ELECTRONICS = '电子学'
+const FAST_TALK = '话术'
+const FIGHTING = '格斗'
+const FIREARMS = '射击'
+const FIRST_AID = '急救'
+const HISTORY = '历史'
+const HYPNOSIS = '催眠'
+const INTIMIDATE = '恐吓'
+const JUMP = '跳跃'
+const LANGUAGE_OTHER = '外语'
+const LANGUAGE_OWN = '母语'
+const LAW = '法律'
+const LIBRARY_USE = '图书馆使用'
+const LISTEN = '聆听'
+const LOCKSMITH = '锁匠'
+const LORE = '灵感'
+const MECHANICAL_REPAIR = '机械维修'
+const MEDICINE = '医学'
+const NATURAL_WORLD = '博物学'
+const NAVIGATION = '领航'
+const OCCULT = '神秘学'
+const OPERATE_HEAVY_MACHINERY = '操作重型机械'
+const PERSUADE = '说服'
+const PILOT = '驾驶'
+const PSYCHOANALYSIS = '精神分析'
+const PSYCHOLOGY = '心理学'
+const READ_LIPS = '读唇'
+const RIDE = '骑术'
+const SCIENCE = '科学'
+const SLEIGHT_OF_HAND = '妙手'
+const SPOT_HIDDEN = '侦察'
+const STEALTH = '潜行'
+const SURVIVAL = '生存'
+const SWIM = '游泳'
+const THROW = '投掷'
+const TRACK = '追踪'
+const ACTING = '表演'
+const ASTRONOMY = '天文学'
+const AXE = '斧'
+const BIOLOGY = '生物学'
+const BOTANY = '植物学'
+const BOW = '弓'
+const BRAWL = '斗殴'
+const CHAINSAW = '链锯'
+const CHEMISTRY = '化学'
+const CRYPTOGRAPHY = '密码学'
+const ENGINEERING = '工程学'
+const FINE_ART = '美术'
+const FLAIL = '连枷'
+const FLAMETHROWER = '火焰喷射器'
+const FORENSICS = '法医学'
+const FORGERY = '锻造'
+const GARROTE = '绞'
+const GEOLOGY = '地质学'
+const HANDGUN = '手枪'
+const HEAVY_WEAPONS = '重武器'
+const MACHINE_GUN = '自动步枪'
+const MATHEMATICS = '数学'
+const METEOROLOGY = '气象学'
+const PHARMACY = '药学'
+const PHOTOGRAPHY = '摄影'
+const PHYSICS = '物理学'
+const RIFLE = '步枪'
+const SHOTGUN = '霰弹枪'
+const SPEAR = '矛'
+const SUBMACHINE_GUN = '半自动步枪'
+const SWORD = '剑'
+const WHIP = '鞭'
+const ZOOLOGY = '动物学'
+const LITERATURE = '文学'
+const LATIN = '拉丁语'
+const HEBREW = '希伯来语'
+const NON_OWN_LANGUAGE = '其他外语'
+const FARMING = '农学'
+const TECHNICAL_DRAWING = '机械制图'
+const INSTRUMENT = '乐器'
+const PILOT_AIRCRAFT = '飞行器驾驶'
+const PILOT_BOAT = '船驾驶'
+const OTHER = '其他任意技能'
 
 const SCIENCE_SKILLS = [
   ASTRONOMY,
@@ -204,6 +204,7 @@ const INTERPERSONAL_SKILLS = [
 const OCCUPATION_LIST = [
   ANTIQUARIAN = {
     'name': 'Antiquarian',
+    'chinese_name': '古董收藏家',
     'occupation_points': [['edu', 4],],
     'credit_rating': [30, 70],
     'skills': [
@@ -220,6 +221,7 @@ const OCCUPATION_LIST = [
 
   ARTIST = {
     'name': 'Artist',
+    'chinese_name': '艺术家',
     'occupation_points': [['edu', 2], ['pow', 'dex', 2]],
     'credit_rating': [9, 50],
     'skills': [
@@ -236,6 +238,7 @@ const OCCUPATION_LIST = [
 
   ATHLETE = {
     'name': 'Athlete',
+    'chinese_name': '运动员',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 70],
     'skills': [
@@ -252,6 +255,7 @@ const OCCUPATION_LIST = [
 
   AUTHOR = {
     'name': 'Author',
+    'chinese_name': '作家',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
@@ -268,6 +272,7 @@ const OCCUPATION_LIST = [
 
   CLERGY = {
     'name': 'Clergy',
+    'chinese_name': '神职人员',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 60],
     'skills': [
@@ -284,6 +289,7 @@ const OCCUPATION_LIST = [
 
   CRIMINAL = {
     'name': 'Criminal',
+    'chinese_name': '罪犯',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [5, 65],
     'skills': [
@@ -300,6 +306,7 @@ const OCCUPATION_LIST = [
 
   DILETTANTE = {
     'name': 'Dilettante',
+    'chinese_name': '业余艺术爱好者',
     'occupation_points': [['edu', 2], ['app', 2]],
     'credit_rating': [50, 99],
     'skills': [
@@ -316,6 +323,7 @@ const OCCUPATION_LIST = [
 
   DOCTOR_OF_MEDICINE = {
     'name': 'Doctor of Medicine',
+    'chinese_name': '医生',
     'occupation_points': [['edu', 4],],
     'credit_rating': [30, 80],
     'skills': [
@@ -332,6 +340,7 @@ const OCCUPATION_LIST = [
 
   DRIFTER = {
     'name': 'Drifter',
+    'chinese_name': '流浪汉',
     'occupation_points': [['edu', 2], ['app', 'dex', 2]],
     'credit_rating': [0, 5],
     'skills': [
@@ -348,6 +357,7 @@ const OCCUPATION_LIST = [
 
   ENGINEER = {
     'name': 'Engineer',
+    'chinese_name': '工程师',
     'occupation_points': [['edu', 4],],
     'credit_rating': [30, 60],
     'skills': [
@@ -364,6 +374,7 @@ const OCCUPATION_LIST = [
 
   ENTERTAINER = {
     'name': 'Entertainer',
+    'chinese_name': '艺人',
     'occupation_points': [['edu', 2], ['app', 2]],
     'credit_rating': [9, 70],
     'skills': [
@@ -380,6 +391,7 @@ const OCCUPATION_LIST = [
 
   FARMER = {
     'name': 'Farmer',
+    'chinese_name': '农民',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -397,6 +409,7 @@ const OCCUPATION_LIST = [
 
   HACKER = {
     'name': 'Hacker',
+    'chinese_name': '黑客',
     'occupation_points': [['edu', 4],],
     'credit_rating': [10, 70],
     'skills': [
@@ -413,6 +426,7 @@ const OCCUPATION_LIST = [
 
   JOURNALIST = {
     'name': 'Journalist',
+    'chinese_name': '记者',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
@@ -429,6 +443,7 @@ const OCCUPATION_LIST = [
 
   LAWYER = {
     'name': 'Lawyer',
+    'chinese_name': '律师',
     'occupation_points': [['edu', 4],],
     'credit_rating': [30, 80],
     'skills': [
@@ -445,6 +460,7 @@ const OCCUPATION_LIST = [
 
   LIBRARIAN = {
     'name': 'Librarian',
+    'chinese_name': '图书馆管理员',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 35],
     'skills': [
@@ -461,6 +477,7 @@ const OCCUPATION_LIST = [
 
   MILITARY_OFFICER = {
     'name': 'Military officer',
+    'chinese_name': '军官',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [20, 70],
     'skills': [
@@ -477,6 +494,7 @@ const OCCUPATION_LIST = [
 
   MISSIONARY = {
     'name': 'Missionary',
+    'chinese_name': '传教士',
     'occupation_points': [['edu', 4],],
     'credit_rating': [0, 30],
     'skills': [
@@ -493,6 +511,7 @@ const OCCUPATION_LIST = [
 
   MUSICIAN = {
     'name': 'Musician',
+    'chinese_name': '音乐家',
     'occupation_points': [['edu', 2], ['dex', 'pow', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -509,6 +528,7 @@ const OCCUPATION_LIST = [
 
   PARAPSYCHOLOGIST = {
     'name': 'Parapsychologist',
+    'chinese_name': '超心理学家',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
@@ -525,6 +545,7 @@ const OCCUPATION_LIST = [
 
   NAVIGATOR = {
     'name': 'Pilot',
+    'chinese_name': '飞行员',
     'occupation_points': [['edu', 2], ['dex', 2]],
     'credit_rating': [20, 70],
     'skills': [
@@ -541,6 +562,7 @@ const OCCUPATION_LIST = [
 
   POLICE_DETECTIVE = {
     'name': 'Police detective',
+    'chinese_name': '警探',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [20, 50],
     'skills': [
@@ -558,6 +580,7 @@ const OCCUPATION_LIST = [
 
   POLICE_OFFICER = {
     'name': 'Police officer',
+    'chinese_name': '警察',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -574,6 +597,7 @@ const OCCUPATION_LIST = [
 
   PRIVATE_INVESTIGATOR = {
     'name': 'Private investigator',
+    'chinese_name': '私家侦探',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -590,6 +614,7 @@ const OCCUPATION_LIST = [
 
   PROFESSOR = {
     'name': 'Professor',
+    'chinese_name': '教授',
     'occupation_points': [['edu', 4],],
     'credit_rating': [20, 70],
     'skills': [
@@ -606,6 +631,7 @@ const OCCUPATION_LIST = [
 
   SOLDIER = {
     'name': 'Soldier',
+    'chinese_name': '士兵',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -622,6 +648,7 @@ const OCCUPATION_LIST = [
 
   TRIBE_MEMBER = {
     'name': 'Tribe member',
+    'chinese_name': '部落成员',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [0, 30],
     'skills': [
@@ -638,6 +665,7 @@ const OCCUPATION_LIST = [
 
   ZEALOT = {
     'name': 'Zealot',
+    'chinese_name': '狂热者',
     'occupation_points': [['edu', 2], ['pow', 'app', 2]],
     'credit_rating': [0, 15],
     'skills': [
@@ -816,7 +844,7 @@ var credit = document.querySelectorAll('.credit')
 var oName = document.querySelector('.o-name')
 var attribute = document.querySelector('.char')
 var occupationDropdown = document.getElementById('occupation')
-var occupationName = ANTIQUARIAN['name'];
+var occupationName = ANTIQUARIAN['chinese_name'];
 var occupationCredit = [30, 70];
 var occupationSkills = ANTIQUARIAN['skills'];
 var occupationPoints = [['edu', 4], ];
@@ -825,8 +853,8 @@ var occupation = ANTIQUARIAN
 occupationDropdown.addEventListener('change', event => {
   OCCUPATION_LIST.forEach(element => {
     occupation = element
-    if (element['name'] == occupationDropdown.value) {
-      occupationName = element['name']
+    if (element['chinese_name'] == occupationDropdown.value) {
+      occupationName = element['chinese_name']
       occupationCredit = element['credit_rating']
       occupationSkills = element['skills']
       if (element['occupation_points'].length == 1) {
@@ -859,80 +887,80 @@ occupationDropdown.addEventListener('change', event => {
   } else {
     for (let index = 0; index < occupationSkills[0].length; index++) {
       if (typeof(occupationSkills[0][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[0][index] = occupationSkills[0][index].join(', ')
+        occupationSkills[0][index] = occupationSkills[0][index].join('，')
       }
     }
-    document.getElementById('skill1').innerHTML = occupationSkills[0].join(', ')
+    document.getElementById('skill1').innerHTML = occupationSkills[0].join('，')
   }
   if (typeof(occupationSkills[1]) == typeof(ACCOUNTING)) {
     document.getElementById('skill2').innerHTML = occupationSkills[1]
   } else {
     for (let index = 0; index < occupationSkills[1].length; index++) {
       if (typeof(occupationSkills[1][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[1][index] = occupationSkills[1][index].join(', ')
+        occupationSkills[1][index] = occupationSkills[1][index].join('，')
       }
     }
-    document.getElementById('skill2').innerHTML = occupationSkills[1].join(', ')
+    document.getElementById('skill2').innerHTML = occupationSkills[1].join('，')
   }
   if (typeof(occupationSkills[2]) == typeof(ACCOUNTING)) {
     document.getElementById('skill3').innerHTML = occupationSkills[2]
   } else {
     for (let index = 0; index < occupationSkills[2].length; index++) {
       if (typeof(occupationSkills[2][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[2][index] = occupationSkills[2][index].join(', ')
+        occupationSkills[2][index] = occupationSkills[2][index].join('，')
       }
     }
-    document.getElementById('skill3').innerHTML = occupationSkills[2].join(', ')
+    document.getElementById('skill3').innerHTML = occupationSkills[2].join('，')
   }
   if (typeof(occupationSkills[3]) == typeof(ACCOUNTING)) {
     document.getElementById('skill4').innerHTML = occupationSkills[3]
   } else {
     for (let index = 0; index < occupationSkills[3].length; index++) {
       if (typeof(occupationSkills[3][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[3][index] = occupationSkills[3][index].join(', ')
+        occupationSkills[3][index] = occupationSkills[3][index].join('，')
       }
     }
-    document.getElementById('skill4').innerHTML = occupationSkills[3].join(', ')
+    document.getElementById('skill4').innerHTML = occupationSkills[3].join('，')
   }
   if (typeof(occupationSkills[4]) == typeof(ACCOUNTING)) {
     document.getElementById('skill5').innerHTML = occupationSkills[4]
   } else {
     for (let index = 0; index < occupationSkills[4].length; index++) {
       if (typeof(occupationSkills[4][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[4][index] = occupationSkills[4][index].join(', ')
+        occupationSkills[4][index] = occupationSkills[4][index].join('，')
       }
     }
-    document.getElementById('skill5').innerHTML = occupationSkills[4].join(', ')
+    document.getElementById('skill5').innerHTML = occupationSkills[4].join('，')
   }
   if (typeof(occupationSkills[5]) == typeof(ACCOUNTING)) {
     document.getElementById('skill6').innerHTML = occupationSkills[5]
   } else {
     for (let index = 0; index < occupationSkills[5].length; index++) {
       if (typeof(occupationSkills[5][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[5][index] = occupationSkills[5][index].join(', ')
+        occupationSkills[5][index] = occupationSkills[5][index].join('，')
       }
     }
-    document.getElementById('skill6').innerHTML = occupationSkills[5].join(', ')
+    document.getElementById('skill6').innerHTML = occupationSkills[5].join('，')
   }
   if (typeof(occupationSkills[6]) == typeof(ACCOUNTING)) {
     document.getElementById('skill7').innerHTML = occupationSkills[6]
   } else {
     for (let index = 0; index < occupationSkills[6].length; index++) {
       if (typeof(occupationSkills[6][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[6][index] = occupationSkills[6][index].join(', ')
+        occupationSkills[6][index] = occupationSkills[6][index].join('，')
       }
     }
-    document.getElementById('skill7').innerHTML = occupationSkills[6].join(', ')
+    document.getElementById('skill7').innerHTML = occupationSkills[6].join('，')
   }
   if (typeof(occupationSkills[7]) == typeof(ACCOUNTING)) {
     document.getElementById('skill8').innerHTML = occupationSkills[7]
   } else {
     for (let index = 0; index < occupationSkills[7].length; index++) {
       if (typeof(occupationSkills[7][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[7][index] = occupationSkills[7][index].join(', ')
+        occupationSkills[7][index] = occupationSkills[7][index].join('，')
       }
     }
-    document.getElementById('skill8').innerHTML = occupationSkills[7].join(', ')
+    document.getElementById('skill8').innerHTML = occupationSkills[7].join('，')
   }
 })
 
@@ -941,11 +969,11 @@ occupationDropdown.addEventListener('change', event => {
 const nextStep = document.querySelector('.button6')
 nextStep.addEventListener('click', event => {
   localStorage.setItem('occupation', occupation)
-  location.href = 'building_character_4.html'
+  location.href = 'building_character_4_chinese.html'
 })
 
 // Occupation detail
 const occupationDetaiils = document.querySelector('.button5')
 occupationDetaiils.addEventListener('click', event => {
-  location.href = 'occupation_list.html'
+  location.href = 'occupation_list_chinese.html'
 })
