@@ -671,6 +671,7 @@ const OCCUPATION_LIST = [
     'skills': [
         HISTORY,
         INTERPERSONAL_SKILLS,
+        INTERPERSONAL_SKILLS,
         PSYCHOLOGY,
         STEALTH,
         OTHER,
@@ -880,7 +881,7 @@ occupationDropdown.addEventListener('change', event => {
   if (typeof(occupationPoints) == typeof('EDU')) {
      attribute.innerHTML = `${occupationPoints}`
   } else {
-    attribute.innerHTML = `${occupationPoints[0]} and ${occupationPoints[1]}`
+    attribute.innerHTML = `${occupationPoints[0]}和${occupationPoints[1]}`
   }
   if (typeof(occupationSkills[0]) == typeof(ACCOUNTING)) {
     document.getElementById('skill1').innerHTML = occupationSkills[0]

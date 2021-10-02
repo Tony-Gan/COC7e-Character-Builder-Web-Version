@@ -1,13 +1,40 @@
 body {
-  overflow: hidden;
   background: no-repeat url('../assets/background1.png');
   background-size: cover;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 h1 {
   font-family: 'Aladin';
   text-align: center;
   color: white;
-  font-size: 80px;
+  font-size: 40px;
   min-height: 10%;
+}
+
+thead {
+  font-family: 'Merriweather';
+  font-size: 16px;
+  text-align: left;
+}
+
+tbody {
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+
+table, tr, td {
+  border: 1px solid white;
+}
+
+p {
+  font-family: 'Poppins';
+  font-weight: 800;
+  font-size: 16px;
+  text-align: center;
 }

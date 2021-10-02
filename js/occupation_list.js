@@ -1,46 +1,3 @@
-const d6 = () => {
-  return Math.floor(Math.random() * 6) + 1
-}
-
-const d4 = () => {
- return Math.floor(Math.random() * 4) + 1
-}
-
-const str = document.getElementById('str')
-const con = document.getElementById('con')
-const dex = document.getElementById('dex')
-const int = document.getElementById('int')
-const siz = document.getElementById('siz')
-const pow = document.getElementById('pow')
-const app = document.getElementById('app')
-const edu = document.getElementById('edu')
-const luc = document.getElementById('luc')
-const valueColouring = (value, label) => {
-  if (value >= 80) {
-    label.style.color = 'red'
-  } else if(value >= 50) {
-    label.style.color = 'yellow'
-  }
-}
-valueColouring(localStorage.getItem('str'), str)
-valueColouring(localStorage.getItem('con'), con)
-valueColouring(localStorage.getItem('dex'), dex)
-valueColouring(localStorage.getItem('int'), int)
-valueColouring(localStorage.getItem('siz'), siz)
-valueColouring(localStorage.getItem('pow'), pow)
-valueColouring(localStorage.getItem('app'), app)
-valueColouring(localStorage.getItem('edu'), edu)
-valueColouring(localStorage.getItem('luc'), luc)
-str.innerHTML = localStorage.getItem('str')
-con.innerHTML = localStorage.getItem('con')
-dex.innerHTML = localStorage.getItem('dex')
-int.innerHTML = localStorage.getItem('int')
-siz.innerHTML = localStorage.getItem('siz')
-pow.innerHTML = localStorage.getItem('pow')
-app.innerHTML = localStorage.getItem('app')
-edu.innerHTML = localStorage.getItem('edu')
-luc.innerHTML = localStorage.getItem('luc')
-
 const ACCOUNTING = 'Accounting'
 const ANIMAL_HANDLING = 'Animal handling'
 const ANTHROPOLOGY = 'Anthropology'
@@ -204,6 +161,7 @@ const INTERPERSONAL_SKILLS = [
 const OCCUPATION_LIST = [
   ANTIQUARIAN = {
     'name': 'Antiquarian',
+    'chinese_name': '古董收藏家',
     'occupation_points': [['edu', 4],],
     'credit_rating': [30, 70],
     'skills': [
@@ -220,6 +178,7 @@ const OCCUPATION_LIST = [
 
   ARTIST = {
     'name': 'Artist',
+    'chinese_name': '艺术家',
     'occupation_points': [['edu', 2], ['pow', 'dex', 2]],
     'credit_rating': [9, 50],
     'skills': [
@@ -236,6 +195,7 @@ const OCCUPATION_LIST = [
 
   ATHLETE = {
     'name': 'Athlete',
+    'chinese_name': '运动员',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 70],
     'skills': [
@@ -252,6 +212,7 @@ const OCCUPATION_LIST = [
 
   AUTHOR = {
     'name': 'Author',
+    'chinese_name': '作家',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
@@ -268,6 +229,7 @@ const OCCUPATION_LIST = [
 
   CLERGY = {
     'name': 'Clergy',
+    'chinese_name': '神职人员',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 60],
     'skills': [
@@ -284,6 +246,7 @@ const OCCUPATION_LIST = [
 
   CRIMINAL = {
     'name': 'Criminal',
+    'chinese_name': '罪犯',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [5, 65],
     'skills': [
@@ -300,6 +263,7 @@ const OCCUPATION_LIST = [
 
   DILETTANTE = {
     'name': 'Dilettante',
+    'chinese_name': '业余艺术爱好者',
     'occupation_points': [['edu', 2], ['app', 2]],
     'credit_rating': [50, 99],
     'skills': [
@@ -316,6 +280,7 @@ const OCCUPATION_LIST = [
 
   DOCTOR_OF_MEDICINE = {
     'name': 'Doctor of Medicine',
+    'chinese_name': '医生',
     'occupation_points': [['edu', 4],],
     'credit_rating': [30, 80],
     'skills': [
@@ -332,6 +297,7 @@ const OCCUPATION_LIST = [
 
   DRIFTER = {
     'name': 'Drifter',
+    'chinese_name': '流浪汉',
     'occupation_points': [['edu', 2], ['app', 'dex', 2]],
     'credit_rating': [0, 5],
     'skills': [
@@ -348,6 +314,7 @@ const OCCUPATION_LIST = [
 
   ENGINEER = {
     'name': 'Engineer',
+    'chinese_name': '工程师',
     'occupation_points': [['edu', 4],],
     'credit_rating': [30, 60],
     'skills': [
@@ -364,6 +331,7 @@ const OCCUPATION_LIST = [
 
   ENTERTAINER = {
     'name': 'Entertainer',
+    'chinese_name': '艺人',
     'occupation_points': [['edu', 2], ['app', 2]],
     'credit_rating': [9, 70],
     'skills': [
@@ -380,6 +348,7 @@ const OCCUPATION_LIST = [
 
   FARMER = {
     'name': 'Farmer',
+    'chinese_name': '农民',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -397,6 +366,7 @@ const OCCUPATION_LIST = [
 
   HACKER = {
     'name': 'Hacker',
+    'chinese_name': '黑客',
     'occupation_points': [['edu', 4],],
     'credit_rating': [10, 70],
     'skills': [
@@ -413,6 +383,7 @@ const OCCUPATION_LIST = [
 
   JOURNALIST = {
     'name': 'Journalist',
+    'chinese_name': '记者',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
@@ -429,6 +400,7 @@ const OCCUPATION_LIST = [
 
   LAWYER = {
     'name': 'Lawyer',
+    'chinese_name': '律师',
     'occupation_points': [['edu', 4],],
     'credit_rating': [30, 80],
     'skills': [
@@ -445,6 +417,7 @@ const OCCUPATION_LIST = [
 
   LIBRARIAN = {
     'name': 'Librarian',
+    'chinese_name': '图书馆管理员',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 35],
     'skills': [
@@ -461,6 +434,7 @@ const OCCUPATION_LIST = [
 
   MILITARY_OFFICER = {
     'name': 'Military officer',
+    'chinese_name': '军官',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [20, 70],
     'skills': [
@@ -477,6 +451,7 @@ const OCCUPATION_LIST = [
 
   MISSIONARY = {
     'name': 'Missionary',
+    'chinese_name': '传教士',
     'occupation_points': [['edu', 4],],
     'credit_rating': [0, 30],
     'skills': [
@@ -493,6 +468,7 @@ const OCCUPATION_LIST = [
 
   MUSICIAN = {
     'name': 'Musician',
+    'chinese_name': '音乐家',
     'occupation_points': [['edu', 2], ['dex', 'pow', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -509,6 +485,7 @@ const OCCUPATION_LIST = [
 
   PARAPSYCHOLOGIST = {
     'name': 'Parapsychologist',
+    'chinese_name': '超心理学家',
     'occupation_points': [['edu', 4],],
     'credit_rating': [9, 30],
     'skills': [
@@ -525,6 +502,7 @@ const OCCUPATION_LIST = [
 
   NAVIGATOR = {
     'name': 'Pilot',
+    'chinese_name': '飞行员',
     'occupation_points': [['edu', 2], ['dex', 2]],
     'credit_rating': [20, 70],
     'skills': [
@@ -541,6 +519,7 @@ const OCCUPATION_LIST = [
 
   POLICE_DETECTIVE = {
     'name': 'Police detective',
+    'chinese_name': '警探',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [20, 50],
     'skills': [
@@ -558,6 +537,7 @@ const OCCUPATION_LIST = [
 
   POLICE_OFFICER = {
     'name': 'Police officer',
+    'chinese_name': '警察',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -574,6 +554,7 @@ const OCCUPATION_LIST = [
 
   PRIVATE_INVESTIGATOR = {
     'name': 'Private investigator',
+    'chinese_name': '私家侦探',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -590,6 +571,7 @@ const OCCUPATION_LIST = [
 
   PROFESSOR = {
     'name': 'Professor',
+    'chinese_name': '教授',
     'occupation_points': [['edu', 4],],
     'credit_rating': [20, 70],
     'skills': [
@@ -606,6 +588,7 @@ const OCCUPATION_LIST = [
 
   SOLDIER = {
     'name': 'Soldier',
+    'chinese_name': '士兵',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [9, 30],
     'skills': [
@@ -622,6 +605,7 @@ const OCCUPATION_LIST = [
 
   TRIBE_MEMBER = {
     'name': 'Tribe member',
+    'chinese_name': '部落成员',
     'occupation_points': [['edu', 2], ['dex', 'str', 2]],
     'credit_rating': [0, 30],
     'skills': [
@@ -638,6 +622,7 @@ const OCCUPATION_LIST = [
 
   ZEALOT = {
     'name': 'Zealot',
+    'chinese_name': '狂热者',
     'occupation_points': [['edu', 2], ['pow', 'app', 2]],
     'credit_rating': [0, 15],
     'skills': [
@@ -653,300 +638,141 @@ const OCCUPATION_LIST = [
   }
 ]
 
-localStorage.setItem(ACCOUNTING, 5)
-localStorage.setItem(ACTING, 5)
-localStorage.setItem(ANIMAL_HANDLING, 5)
-localStorage.setItem(ANTHROPOLOGY, 1)
-localStorage.setItem(APPRAISE, 5)
-localStorage.setItem(ART_CRAFT, 5)
-localStorage.setItem(ARTILLERY, 1)
-localStorage.setItem(ASTRONOMY, 1)
-localStorage.setItem(AXE, 15)
-localStorage.setItem(BIOLOGY, 1)
-localStorage.setItem(BOTANY, 1)
-localStorage.setItem(BOW, 15)
-localStorage.setItem(BRAWL, 25)
-localStorage.setItem(CHAINSAW, 10)
-localStorage.setItem(CHARM, 15)
-localStorage.setItem(CHEMISTRY, 1)
-localStorage.setItem(CLIMB, 20)
-localStorage.setItem(COMPUTER_USE, 5)
-localStorage.setItem(CREDIT_RATING, 0)
-localStorage.setItem(CRYPTOGRAPHY, 1)
-localStorage.setItem(CTHULHU_MYTHOS, 0)
-localStorage.setItem(DEMOLITIONS, 1)
-localStorage.setItem(DISGUISE, 5)
-localStorage.setItem(DODGE, localStorage.getItem('dex') / 2)
-localStorage.setItem(DIVING, 1)
-localStorage.setItem(DRIVE_AUTO, 20)
-localStorage.setItem(ELECTRICAL_REPAIR, 1)
-localStorage.setItem(ELECTRONICS, 1)
-localStorage.setItem(ENGINEERING, 1)
-localStorage.setItem(FARMING, 5)
-localStorage.setItem(FAST_TALK, 5)
-localStorage.setItem(FIGHTING, 15)
-localStorage.setItem(FIRST_AID, 30)
-localStorage.setItem(FLAIL, 10)
-localStorage.setItem(FLAMETHROWER, 10)
-localStorage.setItem(FORENSICS, 1)
-localStorage.setItem(FORGERY, 5)
-localStorage.setItem(GARROTE, 15)
-localStorage.setItem(GEOLOGY, 1)
-localStorage.setItem(HANDGUN, 20)
-localStorage.setItem(HEAVY_WEAPONS, 10)
-localStorage.setItem(HEBREW, 1)
-localStorage.setItem(HISTORY, 5)
-localStorage.setItem(HYPNOSIS, 1)
-localStorage.setItem(INSTRUMENT, 5)
-localStorage.setItem(INTIMIDATE, 15)
-localStorage.setItem(JUMP, 20)
-localStorage.setItem(LANGUAGE_OTHER, 1)
-localStorage.setItem(LANGUAGE_OWN, localStorage.getItem('edu'))
-localStorage.setItem(LATIN, 1)
-localStorage.setItem(LAW, 5)
-localStorage.setItem(LIBRARY_USE, 20)
-localStorage.setItem(LISTEN, 20)
-localStorage.setItem(LITERATURE, 5)
-localStorage.setItem(LOCKSMITH, 1)
-localStorage.setItem(LORE, 1)
-localStorage.setItem(MACHINE_GUN, 10)
-localStorage.setItem(MATHEMATICS, 10)
-localStorage.setItem(MECHANICAL_REPAIR, 10)
-localStorage.setItem(MEDICINE, 1)
-localStorage.setItem(METEOROLOGY, 1)
-localStorage.setItem(NATURAL_WORLD, 10)
-localStorage.setItem(NAVIGATION, 10)
-localStorage.setItem(NON_OWN_LANGUAGE, 1)
-localStorage.setItem(OCCULT, 5)
-localStorage.setItem(OPERATE_HEAVY_MACHINERY, 1)
-localStorage.setItem(PERSUADE, 10)
-localStorage.setItem(PHARMACY, 1)
-localStorage.setItem(PHOTOGRAPHY, 5)
-localStorage.setItem(PHYSICS, 1)
-localStorage.setItem(PILOT, 1)
-localStorage.setItem(PILOT_AIRCRAFT, 1)
-localStorage.setItem(PILOT_BOAT, 1)
-localStorage.setItem(PSYCHOANALYSIS, 1)
-localStorage.setItem(PSYCHOLOGY, 10)
-localStorage.setItem(READ_LIPS, 1)
-localStorage.setItem(RIDE, 5)
-localStorage.setItem(RIFLE, 25)
-localStorage.setItem(SCIENCE, 1)
-localStorage.setItem(SHOTGUN, 25)
-localStorage.setItem(SLEIGHT_OF_HAND, 10)
-localStorage.setItem(SPEAR, 20)
-localStorage.setItem(SPOT_HIDDEN, 25)
-localStorage.setItem(STEALTH, 20)
-localStorage.setItem(SUBMACHINE_GUN, 15)
-localStorage.setItem(SURVIVAL, 10)
-localStorage.setItem(SWORD, 20)
-localStorage.setItem(SWIM, 20)
-localStorage.setItem(TECHNICAL_DRAWING, 5)
-localStorage.setItem(THROW, 20)
-localStorage.setItem(TRACK, 20)
-localStorage.setItem(WHIP, 5)
-localStorage.setItem(ZOOLOGY, 1)
+const table = document.getElementById('occupation-list')
+const thead = document.createElement('thead')
+const tbody = document.createElement('tbody')
 
+table.appendChild(thead)
+table.appendChild(tbody)
 
-// Initialize Secondary Character
+const headings = [
+  'Occupation',
+  'Credit',
+  'Points',
+  'Skill1',
+  'Skill2',
+  'Skill3',
+  'Skill4',
+  'Skill5',
+  'Skill6',
+  'Skill7',
+  'Skill8'
+]
 
-const maxhpValue = Math.floor((parseInt(localStorage.getItem('con')) + parseInt(localStorage.getItem('siz'))) / 10);
-const maxmpValue = Math.floor(localStorage.getItem('pow') / 5);
-const maxsanValue = 99 - localStorage.getItem(CTHULHU_MYTHOS);
-const sanValue = localStorage.getItem('pow');
-var moveValue;
-if (localStorage.getItem('dex') < localStorage.getItem('siz') && localStorage.getItem('str') < localStorage.getItem('siz')) {
-  moveValue = 7
-} else if (
-  (localStorage.getItem('dex') > localStorage.getItem('siz')) && (localStorage.getItem('siz') > localStorage.getItem('str'))
-  || (localStorage.getItem('str') > localStorage.getItem('siz')) && (localStorage.getItem('siz') > localStorage.getItem('dex'))
-  || (localStorage.getItem('dex') == localStorage.getItem('siz')) && (localStorage.getItem('siz') == localStorage.getItem('str'))
-) {
-  moveValue = 8
-} else {
-  moveValue = 9
-}
-if (localStorage.getItem('age') > 80) {
-  moveValue -= 5
-} else if (localStorage.getItem('age') > 70) {
-  moveValue -= 4
-} else if (localStorage.getItem('age') > 60) {
-  moveValue -= 3
-} else if (localStorage.getItem('age') > 50) {
-  moveValue -= 2
-} else if (localStorage.getItem('age') > 40) {
-  moveValue -= 1
-}
-var buildValue;
-var damageBonusValue;
-var checker = parseInt(localStorage.getItem('str')) + parseInt(localStorage.getItem('con'))
-if (checker >= 2 && checker <= 64) {
-  buildValue = -2
-  damageBonusValue = -2
-} else if (checker >= 65 && checker <= 84) {
-  buildValue = -1
-  damageBonusValue = -1
-} else if (checker >= 85 && checker <= 124) {
-  buildValue = 0
-  damageBonusValue = 0
-} else if (checker >= 125 && checker <= 164) {
-  buildValue = 1
-  damageBonusValue = d4()
-} else if (checker >= 165 && checker <= 204) {
-  buildValue = 2
-  damageBonusValue = d6()
-} else {
-  var overflow = Math.ceil((checker - 204) / 80)
-  buildValue = 2 + overflow
-  damageBonusValue = d6()
-  for (let i = 0; i < overflow; i++) {
-    damageBonusValue += d6()
-  }
-}
+var headingLine = document.createElement('tr')
+headings.forEach(element => {
+  const heading = document.createElement('th')
+  heading.innerHTML = element
+  headingLine.appendChild(heading)
+});
+thead.appendChild(headingLine)
 
-localStorage.setItem('maxhp', maxhpValue)
-localStorage.setItem('maxmp', maxmpValue)
-localStorage.setItem('maxsan', maxsanValue)
-localStorage.setItem('currentsan', sanValue)
-localStorage.setItem('move', moveValue)
-localStorage.setItem('build', buildValue)
-localStorage.setItem('damageBonus', damageBonusValue)
-
-// Occupation Details
-var credit = document.querySelectorAll('.credit')
-var oName = document.querySelector('.o-name')
-var attribute = document.querySelector('.char')
-var occupationDropdown = document.getElementById('occupation')
-var occupationName = ANTIQUARIAN['name'];
-var occupationCredit = [30, 70];
-var occupationSkills = ANTIQUARIAN['skills'];
-var occupationPoints = [['edu', 4], ];
-var occupation = ANTIQUARIAN
-
-occupationDropdown.addEventListener('change', event => {
-  OCCUPATION_LIST.forEach(element => {
-    occupation = element
-    if (element['name'] == occupationDropdown.value) {
-      occupationName = element['name']
-      occupationCredit = element['credit_rating']
-      occupationSkills = element['skills']
-      if (element['occupation_points'].length == 1) {
-        occupationPoints = 'EDU'
+const createSkill = (skill) => {
+  if (typeof(skill) == typeof(ACCOUNTING)) {
+    return [skill,]
+  } else {
+    skillStr = []
+    skill.forEach(element => {
+      if (typeof(element) == typeof(ACCOUNTING)) {
+        skillStr.push(element)
       } else {
-        if (element['occupation_points'][1].length == 2) {
-          occupationPoints = ['EDU', element['occupation_points'][1][0].toUpperCase()]
-        } else {
-          var c1 = localStorage.getItem(element['occupation_points'][1][0])
-          var c2 = localStorage.getItem(element['occupation_points'][1][1])
-          if (parseInt(c1) > parseInt(c2)) {
-            occupationPoints = ['EDU', element['occupation_points'][1][0].toUpperCase()]
-          } else {
-            occupationPoints = ['EDU', element['occupation_points'][1][1].toUpperCase()]
-          }
-        }
+        element.forEach(i => {
+          skillStr.push(i)
+        })
       }
-    }
-  });
-  oName.innerHTML = occupationName
-  credit[0].innerHTML = occupationCredit[0]
-  credit[1].innerHTML = occupationCredit[1]
-  if (typeof(occupationPoints) == typeof('EDU')) {
-     attribute.innerHTML = `${occupationPoints}`
-  } else {
-    attribute.innerHTML = `${occupationPoints[0]} and ${occupationPoints[1]}`
+    })
+    return skillStr
   }
-  if (typeof(occupationSkills[0]) == typeof(ACCOUNTING)) {
-    document.getElementById('skill1').innerHTML = occupationSkills[0]
+}
+
+OCCUPATION_LIST.forEach(occupation => {
+  var row = document.createElement('tr')
+
+  const name = document.createElement('td')
+  name.innerHTML = occupation['name']
+  row.appendChild(name)
+
+  const credit = document.createElement('td')
+  credit.innerHTML = `${occupation['credit_rating'][0]} to ${occupation['credit_rating'][1]}`
+  row.appendChild(credit)
+
+  const points = document.createElement('td')
+  if (occupation['occupation_points'].length == 1) {
+    points.innerHTML = 'EDU'
   } else {
-    for (let index = 0; index < occupationSkills[0].length; index++) {
-      if (typeof(occupationSkills[0][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[0][index] = occupationSkills[0][index].join(', ')
-      }
+    if (occupation['occupation_points'][1].length == 2) {
+      points.innerHTML = `EDU | ${occupation['occupation_points'][1][0].toUpperCase()}`
+    } else {
+      points.innerHTML = `EDU | ${occupation['occupation_points'][1][0].toUpperCase()} or ${occupation['occupation_points'][1][1].toUpperCase()}`
     }
-    document.getElementById('skill1').innerHTML = occupationSkills[0].join(', ')
   }
-  if (typeof(occupationSkills[1]) == typeof(ACCOUNTING)) {
-    document.getElementById('skill2').innerHTML = occupationSkills[1]
-  } else {
-    for (let index = 0; index < occupationSkills[1].length; index++) {
-      if (typeof(occupationSkills[1][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[1][index] = occupationSkills[1][index].join(', ')
-      }
-    }
-    document.getElementById('skill2').innerHTML = occupationSkills[1].join(', ')
-  }
-  if (typeof(occupationSkills[2]) == typeof(ACCOUNTING)) {
-    document.getElementById('skill3').innerHTML = occupationSkills[2]
-  } else {
-    for (let index = 0; index < occupationSkills[2].length; index++) {
-      if (typeof(occupationSkills[2][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[2][index] = occupationSkills[2][index].join(', ')
-      }
-    }
-    document.getElementById('skill3').innerHTML = occupationSkills[2].join(', ')
-  }
-  if (typeof(occupationSkills[3]) == typeof(ACCOUNTING)) {
-    document.getElementById('skill4').innerHTML = occupationSkills[3]
-  } else {
-    for (let index = 0; index < occupationSkills[3].length; index++) {
-      if (typeof(occupationSkills[3][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[3][index] = occupationSkills[3][index].join(', ')
-      }
-    }
-    document.getElementById('skill4').innerHTML = occupationSkills[3].join(', ')
-  }
-  if (typeof(occupationSkills[4]) == typeof(ACCOUNTING)) {
-    document.getElementById('skill5').innerHTML = occupationSkills[4]
-  } else {
-    for (let index = 0; index < occupationSkills[4].length; index++) {
-      if (typeof(occupationSkills[4][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[4][index] = occupationSkills[4][index].join(', ')
-      }
-    }
-    document.getElementById('skill5').innerHTML = occupationSkills[4].join(', ')
-  }
-  if (typeof(occupationSkills[5]) == typeof(ACCOUNTING)) {
-    document.getElementById('skill6').innerHTML = occupationSkills[5]
-  } else {
-    for (let index = 0; index < occupationSkills[5].length; index++) {
-      if (typeof(occupationSkills[5][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[5][index] = occupationSkills[5][index].join(', ')
-      }
-    }
-    document.getElementById('skill6').innerHTML = occupationSkills[5].join(', ')
-  }
-  if (typeof(occupationSkills[6]) == typeof(ACCOUNTING)) {
-    document.getElementById('skill7').innerHTML = occupationSkills[6]
-  } else {
-    for (let index = 0; index < occupationSkills[6].length; index++) {
-      if (typeof(occupationSkills[6][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[6][index] = occupationSkills[6][index].join(', ')
-      }
-    }
-    document.getElementById('skill7').innerHTML = occupationSkills[6].join(', ')
-  }
-  if (typeof(occupationSkills[7]) == typeof(ACCOUNTING)) {
-    document.getElementById('skill8').innerHTML = occupationSkills[7]
-  } else {
-    for (let index = 0; index < occupationSkills[7].length; index++) {
-      if (typeof(occupationSkills[7][index]) != typeof(ACCOUNTING)) {
-        occupationSkills[7][index] = occupationSkills[7][index].join(', ')
-      }
-    }
-    document.getElementById('skill8').innerHTML = occupationSkills[7].join(', ')
-  }
+  row.appendChild(points)
+
+  const skill1 = document.createElement('td')
+  skill1.innerHTML = createSkill(occupation['skills'][0]).join(', ')
+  row.appendChild(skill1)
+
+  const skill2 = document.createElement('td')
+  skill2.innerHTML = createSkill(occupation['skills'][1]).join(', ')
+  row.appendChild(skill2)
+
+  const skill3 = document.createElement('td')
+  skill3.innerHTML = createSkill(occupation['skills'][2]).join(', ')
+  row.appendChild(skill3)
+
+  const skill4 = document.createElement('td')
+  skill4.innerHTML = createSkill(occupation['skills'][3]).join(', ')
+  row.appendChild(skill4)
+
+  const skill5 = document.createElement('td')
+  skill5.innerHTML = createSkill(occupation['skills'][4]).join(', ')
+  row.appendChild(skill5)
+
+  const skill6 = document.createElement('td')
+  skill6.innerHTML = createSkill(occupation['skills'][5]).join(', ')
+  row.appendChild(skill6)
+
+  const skill7 = document.createElement('td')
+  skill7.innerHTML = createSkill(occupation['skills'][6]).join(', ')
+  row.appendChild(skill7)
+
+  const skill8 = document.createElement('td')
+  skill8.innerHTML = createSkill(occupation['skills'][7]).join(', ')
+  row.appendChild(skill8)
+
+  tbody.appendChild(row)
 })
 
-
-// Next page
-const nextStep = document.querySelector('.button6')
-nextStep.addEventListener('click', event => {
-  localStorage.setItem('occupation', occupation)
-  location.href = 'building_character_4.html'
+var column1Head = document.querySelectorAll('thead tr th:nth-child(1)')
+var column1Content = document.querySelectorAll('tbody tr td:nth-child(1)')
+column1Head.forEach(cell => {
+  cell.style.width = '130px'
+})
+column1Content.forEach(cell => {
+  cell.style.width = '130px'
+  cell.style.fontFamily = 'Merriweather'
+  cell.style.fontWeight = 700
 })
 
-// Occupation detail
-const occupationDetaiils = document.querySelector('.button5')
-occupationDetaiils.addEventListener('click', event => {
-  location.href = 'occupation_list.html'
+var column2Head = document.querySelectorAll('thead tr th:nth-child(2)')
+var column2Content = document.querySelectorAll('tbody tr td:nth-child(2)')
+column2Head.forEach(cell => {
+  cell.style.width = '60px'
+})
+column2Content.forEach(cell => {
+  cell.style.width = '60px'
+})
+
+var column3Head = document.querySelectorAll('thead tr th:nth-child(3)')
+var column3Content = document.querySelectorAll('tbody tr td:nth-child(3)')
+column3Head.forEach(cell => {
+  cell.style.width = '120px'
+})
+column3Content.forEach(cell => {
+  cell.style.width = '120px'
+})
+
+const goBack = document.querySelector('body')
+goBack.addEventListener('click', event => {
+  location.href = 'building_character_3.html'
 })
