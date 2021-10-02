@@ -1,0 +1,13 @@
+body {
+  overflow: hidden;
+  background: no-repeat url('../assets/background1.png');
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Aladin';
+  text-align: center;
+  color: white;
+  font-size: 80px;
+  min-height: 10%;
+}

@@ -817,16 +817,28 @@ move.innerHTML = moveValue
 build.innerHTML = buildValue
 damageBonus.innerHTML = damageBonusValue
 
+localStorage.setItem('maxhp', maxhpValue)
+localStorage.setItem('maxmp', maxmpValue)
+localStorage.setItem('maxsan', maxsanValue)
+localStorage.setItem('currentsan', sanValue)
+localStorage.setItem('move', moveValue)
+localStorage.setItem('build', buildValue)
+localStorage.setItem('damageBonus', damageBonusValue)
+
 // Occupation Details
-var occupationDetails = document.querySelector('.occupation-description-one')
-var occupationDetailsP = document.querySelector('.occupation-description-two')
+var credit = document.querySelectorAll('.credit')
+var oName = document.querySelector('.o-name')
+var attribute = document.querySelector('.char')
 var occupationDropdown = document.getElementById('occupation')
+var occupationName = ANTIQUARIAN['name'];
+var occupationCredit = [30, 70];
+var occupationSkills = ANTIQUARIAN['skills'];
+var occupationPoints = [['edu', 4], ];
+var occupation = ANTIQUARIAN
+
 occupationDropdown.addEventListener('change', event => {
-  var occupationName;
-  var occupationCredit;
-  var occupationSkills;
-  var occupationPoints;
   OCCUPATION_LIST.forEach(element => {
+    occupation = element
     if (element['name'] == occupationDropdown.value) {
       occupationName = element['name']
       occupationCredit = element['credit_rating']
@@ -844,15 +856,14 @@ occupationDropdown.addEventListener('change', event => {
       }
     }
   });
-  var information1 = `${occupationName}, with credit rating ranged from ${occupationCredit[0]} to ${occupationCredit[1]}.\n`
-  var information2;
+  oName.innerHTML = occupationName
+  credit[0].innerHTML = occupationCredit[0]
+  credit[1].innerHTML = occupationCredit[1]
   if (typeof(occupationPoints) == typeof('EDU')) {
-    var information2 = `Personally for you, the occupation skill points of ${occupationName} is decided by ${occupationPoints}.\n`
+     attribute.innerHTML = `${occupationPoints}`
   } else {
-    var information2 = `Personally for you, the occupation skill points of ${occupationName} is decided by ${occupationPoints[0]} and ${occupationPoints[1]}.\n`
+    attribute.innerHTML = `${occupationPoints[0]} and ${occupationPoints[1]}`
   }
-  
-  occupationDetails.innerHTML = information1 + information2
   if (typeof(occupationSkills[0]) == typeof(ACCOUNTING)) {
     document.getElementById('skill1').innerHTML = occupationSkills[0]
   } else {
@@ -933,4 +944,18 @@ occupationDropdown.addEventListener('change', event => {
     }
     document.getElementById('skill8').innerHTML = occupationSkills[7].join(', ')
   }
+})
+
+
+// Next page
+const nextStep = document.querySelector('.button6')
+nextStep.addEventListener('click', event => {
+  localStorage.setItem('occupation', occupation)
+  location.href = 'building_character_4.html'
+})
+
+// Occupation detail
+const occupationDetaiils = document.querySelector('.button5')
+occupationDetaiils.addEventListener('click', event => {
+  location.href = 'occupation_list.html'
 })
