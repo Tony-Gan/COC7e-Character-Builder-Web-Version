@@ -748,13 +748,6 @@ localStorage.setItem(ZOOLOGY, 1)
 
 
 // Initialize Secondary Character
-var maxhp = document.getElementById('max-hp')
-var maxmp = document.getElementById('max-mp')
-var maxSan = document.getElementById('max-san')
-var san = document.getElementById('current-san')
-var move = document.getElementById('move')
-var build = document.getElementById('build')
-var damageBonus = document.getElementById('damage-bonus')
 
 const maxhpValue = Math.floor((parseInt(localStorage.getItem('con')) + parseInt(localStorage.getItem('siz'))) / 10);
 const maxmpValue = Math.floor(localStorage.getItem('pow') / 5);
@@ -809,13 +802,6 @@ if (checker >= 2 && checker <= 64) {
     damageBonusValue += d6()
   }
 }
-maxhp.innerHTML = maxhpValue
-maxmp.innerHTML = maxmpValue
-maxSan.innerHTML = maxsanValue
-san.innerHTML = sanValue
-move.innerHTML = moveValue
-build.innerHTML = buildValue
-damageBonus.innerHTML = damageBonusValue
 
 localStorage.setItem('maxhp', maxhpValue)
 localStorage.setItem('maxmp', maxmpValue)

@@ -36,10 +36,10 @@ section a {
   color: white;
   background: linear-gradient(135deg, rgba(28,43,27,1) 35%, rgba(51,136,85,1) 100%);
   border: 4px solid #666659;
-  font-size: 28px;
+  font-size: 24px;
   width: 18%;
   text-align: center;
-  padding: 60px;
+  padding: 50px;
   cursor: pointer;
   text-shadow: 2px 2px 2px #1c2b1b;
 }
