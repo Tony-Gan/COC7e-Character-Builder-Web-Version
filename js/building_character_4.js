@@ -102,22 +102,12 @@ const occupationName = localStorage.getItem('occupationName')
 const occupationCredit = localStorage.getItem('occupationCredit').split(',')
 const occupationPointsStr = localStorage.getItem('occupationPoints').split(',')
 var occupationPoints;
-if (occupationPointsStr.length == 2) {
+if (occupationPointsStr.length == 1) {
   occupationPoints = parseInt(localStorage.getItem('edu')) * 4
-} else if (occupationPointsStr.length == 4) {
-  const eduPoints = parseInt(localStorage.getItem('edu')) * 2
-  const otherPoints = parseInt(localStorage.getItem(occupationPointsStr[2])) * 2
-  occupationPoints = eduPoints + otherPoints
 } else {
-  const char1 = parseInt(localStorage.getItem(occupationPointsStr[2]))
-  const char2 = parseInt(localStorage.getItem(occupationPointsStr[3]))
+  const charName = occupationPointsStr[1].toLowerCase()
   const eduPoints = parseInt(localStorage.getItem('edu')) * 2
-  var otherPoints;
-  if (char1 > char2) {
-    otherPoints = parseInt(localStorage.getItem(occupationPointsStr[2])) * 2
-  } else {
-    otherPoints = parseInt(localStorage.getItem(occupationPointsStr[3])) * 2
-  }
+  const otherPoints = parseInt(localStorage.getItem(charName)) * 2
   occupationPoints = eduPoints + otherPoints
 }
 
@@ -281,11 +271,66 @@ skill8.forEach(skill => {
 
 const s9 = document.querySelector('#skill9')
 var skill9 = document.createElement('option')
-skill9.innerHTML = 'Credit Rating'
-skill9.value = 'Credit Rating'
+skill9.innerHTML = 'Credit rating'
+skill9.value = 'Credit rating'
 s9.appendChild(skill9)
 
+const currentValueCalculate = (spanTag, inputTag, skillName) => {
+  const span = document.querySelector(spanTag)
+  const input = document.querySelector(inputTag)
+  const skillValue = parseInt(localStorage.getItem(skillName))
+  span.innerHTML = skillValue
+  input.max = 90 - skillValue
+}
 document.getElementById('available-points').innerHTML = occupationPoints - parseInt(occupationCredit[0])
+
+const name1 = document.getElementById('skill1')
+const name2 = document.getElementById('skill2')
+const name3 = document.getElementById('skill3')
+const name4 = document.getElementById('skill4')
+const name5 = document.getElementById('skill5')
+const name6 = document.getElementById('skill6')
+const name7 = document.getElementById('skill7')
+const name8 = document.getElementById('skill8')
+const name9 = document.getElementById('skill9')
+
+currentValueCalculate('#s1 span', '#skill1-points', name1.value)
+currentValueCalculate('#s2 span', '#skill2-points', name2.value)
+currentValueCalculate('#s3 span', '#skill3-points', name3.value)
+currentValueCalculate('#s4 span', '#skill4-points', name4.value)
+currentValueCalculate('#s5 span', '#skill5-points', name5.value)
+currentValueCalculate('#s6 span', '#skill6-points', name6.value)
+currentValueCalculate('#s7 span', '#skill7-points', name7.value)
+currentValueCalculate('#s8 span', '#skill8-points', name8.value)
+currentValueCalculate('#s9 span', '#skill9-points', name9.value)
+
+name1.addEventListener('change', event => {
+  currentValueCalculate('#s1 span', '#skill1-points', name1.value)
+})
+name2.addEventListener('change', event => {
+  currentValueCalculate('#s2 span', '#skill2-points', name2.value)
+})
+name3.addEventListener('change', event => {
+  currentValueCalculate('#s3 span', '#skill3-points', name3.value)
+})
+name4.addEventListener('change', event => {
+  currentValueCalculate('#s4 span', '#skill4-points', name4.value)
+})
+name5.addEventListener('change', event => {
+  currentValueCalculate('#s5 span', '#skill5-points', name5.value)
+})
+name6.addEventListener('change', event => {
+  currentValueCalculate('#s6 span', '#skill6-points', name6.value)
+})
+name7.addEventListener('change', event => {
+  currentValueCalculate('#s7 span', '#skill7-points', name7.value)
+})
+name8.addEventListener('change', event => {
+  currentValueCalculate('#s8 span', '#skill8-points', name8.value)
+})
+name9.addEventListener('change', event => {
+  currentValueCalculate('#s9 span', '#skill9-points', name9.value)
+})
 
 const input1 = document.getElementById('skill1-points')
 const input2 = document.getElementById('skill2-points')
@@ -347,4 +392,22 @@ inputs.forEach(input => {
     }
     document.getElementById('available-points').innerHTML = occupationPoints - value1 - value2 - value3 - value4 - value5 - value6 - value7 - value8 - value9
   })
+})
+
+const nextStep = document.querySelector('.button7')
+nextStep.addEventListener('click', event => {
+  const availablePoints = document.getElementById('available-points')
+  if (parseInt(availablePoints.innerHTML) != 0) {
+    alert('You must allocate exactly all occuational points to skills before proceeding.')
+  }
+  localStorage.setItem(name1.value, parseInt(localStorage.getItem(name1.value)) + parseInt(input1.value))
+  localStorage.setItem(name2.value, parseInt(localStorage.getItem(name2.value)) + parseInt(input2.value))
+  localStorage.setItem(name3.value, parseInt(localStorage.getItem(name3.value)) + parseInt(input3.value))
+  localStorage.setItem(name4.value, parseInt(localStorage.getItem(name4.value)) + parseInt(input4.value))
+  localStorage.setItem(name5.value, parseInt(localStorage.getItem(name5.value)) + parseInt(input5.value))
+  localStorage.setItem(name6.value, parseInt(localStorage.getItem(name6.value)) + parseInt(input6.value))
+  localStorage.setItem(name7.value, parseInt(localStorage.getItem(name7.value)) + parseInt(input7.value))
+  localStorage.setItem(name8.value, parseInt(localStorage.getItem(name8.value)) + parseInt(input8.value))
+  localStorage.setItem(name9.value, parseInt(localStorage.getItem(name9.value)) + parseInt(input9.value))
+  location.href = 'building_character_5.html'
 })

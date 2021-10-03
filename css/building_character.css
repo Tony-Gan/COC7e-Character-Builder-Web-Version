@@ -322,6 +322,11 @@ button:disabled {
 
 #step4 input {
   font-size: 14px;
-  width: 50px;
-  padding: 8px 0 8px;
+  width: 40px;
+  padding: 8px 5px 8px;
+  margin-top: 5px;
+}
+
+.button7 {
+  width: 500px;
 }
