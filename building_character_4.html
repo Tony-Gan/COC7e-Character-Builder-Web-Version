@@ -28,42 +28,49 @@
   </aside>
 
   <main id="step4">
-    <p>Your occupation is <span id="step4-oname" style="font-weight: 700; color: greenyellow;"></span>. Please allocate your <span id="step4-points" style="color: greenyellow; font-weight: 700;"></span> occupational skill points, you must spend <span style="color: greenyellow; font-weight: 700;">EXACTLY ALL</span> points to the following skills.</p>
-    <p>Your Credit Rating should be set between <span id="step4-credit-1" style="color: greenyellow; font-weight: 700;"></span> and <span id="step4-credit-2" style="color: greenyellow; font-weight: 700;"></span></p>
-    <section>
-      <div id="s1">
-        <select name="skill1" id="skill1"></select>
-        <input type="text" name="skill1-points" id="skill1-points">
-      </div>
-      <div id="s2">
-        <select name="skill2" id="skill2"></select>
-        <input type="text" name="skill2-points" id="skill2-points">
-      </div>
-      <div id="s3">
-        <select name="skill3" id="skill3"></select>
-        <input type="text" name="skill3-points" id="skill3-points">
-      </div>
-      <div id="s4">
-        <select name="skill4" id="skill4"></select>
-        <input type="text" name="skill4-points" id="skill4-points">
-      </div>
-      <div id="s5">
-        <select name="skill5" id="skill5"></select>
-        <input type="text" name="skill5-points" id="skill5-points">
-      </div>
-      <div id="s6">
-        <select name="skill6" id="skill6"></select>
-        <input type="text" name="skill6-points" id="skill6-points">
-      </div>
-      <div id="s7">
-        <select name="skill7" id="skill7"></select>
-        <input type="text" name="skill7-points" id="skill7-points">
-      </div>
-      <div id="s8">
-        <select name="skill8" id="skill8"></select>
-        <input type="text" name="skill8-points" id="skill8-points">
-      </div>
-    </section>
+    <div class="alignment">
+      <p>Your occupation is <span id="step4-oname" style="font-weight: 700; color: greenyellow;"></span>. Please allocate your <span id="step4-points" style="color: greenyellow; font-weight: 700;"></span> occupational skill points, you must spend <span style="color: greenyellow; font-weight: 700;">EXACTLY ALL</span> points to the following skills.</p>
+      <p>Your Credit Rating should be set between <span id="step4-credit-1" style="color: greenyellow; font-weight: 700;"></span> and <span id="step4-credit-2" style="color: greenyellow; font-weight: 700;"></span></p>
+      <section>
+        <div id="s1">
+          <select name="skill1" id="skill1"></select>
+          <input type="number" min="0" max="90" step="1" name="skill1-points" id="skill1-points" value=0>
+        </div>
+        <div id="s2">
+          <select name="skill2" id="skill2"></select>
+          <input type="number" min="0" max="90" step="1" name="skill2-points" id="skill2-points" value=0>
+        </div>
+        <div id="s3">
+          <select name="skill3" id="skill3"></select>
+          <input type="number" min="0" max="90" step="1" name="skill3-points" id="skill3-points" value=0>
+        </div>
+        <div id="s4">
+          <select name="skill4" id="skill4"></select>
+          <input type="number" min="0" max="90" step="1" name="skill4-points" id="skill4-points" value=0>
+        </div>
+        <div id="s5">
+          <select name="skill5" id="skill5"></select>
+          <input type="number" min="0" max="90" step="1" name="skill5-points" id="skill5-points" value=0>
+        </div>
+        <div id="s6">
+          <select name="skill6" id="skill6"></select>
+          <input type="number" min="0" max="90" step="1" name="skill6-points" id="skill6-points" value=0>
+        </div>
+        <div id="s7">
+          <select name="skill7" id="skill7"></select>
+          <input type="number" min="0" max="90" step="1" name="skill7-points" id="skill7-points" value=0>
+        </div>
+        <div id="s8">
+          <select name="skill8" id="skill8"></select>
+          <input type="number" min="0" max="90" step="1" name="skill8-points" id="skill8-points" value=0>
+        </div>
+        <div id="s9">
+          <select name="skill9" id="skill9"></select>
+          <input type="number" min="0" max="90" step="1" name="skill9-points" id="skill9-points" value=0>
+        </div>
+      </section>
+      <p>Now you have <span id="available-points" style="color: greenyellow; font-weight: 700;"></span> points available.</p>
+    </div>
   </main>
 
 </body>
