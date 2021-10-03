@@ -821,11 +821,9 @@ var occupationName = ANTIQUARIAN['name'];
 var occupationCredit = [30, 70];
 var occupationSkills = ANTIQUARIAN['skills'];
 var occupationPoints = [['edu', 4], ];
-var occupation = ANTIQUARIAN
 
 occupationDropdown.addEventListener('change', event => {
   OCCUPATION_LIST.forEach(element => {
-    occupation = element
     if (element['name'] == occupationDropdown.value) {
       occupationName = element['name']
       occupationCredit = element['credit_rating']
@@ -941,7 +939,17 @@ occupationDropdown.addEventListener('change', event => {
 // Next page
 const nextStep = document.querySelector('.button6')
 nextStep.addEventListener('click', event => {
-  localStorage.setItem('occupation', occupation)
+  localStorage.setItem('occupationName', occupationName)
+  localStorage.setItem('occupationCredit', occupationCredit)
+  localStorage.setItem('occupationPoints', occupationPoints)
+  localStorage.setItem('occupationSkill1', occupationSkills[0])
+  localStorage.setItem('occupationSkill2', occupationSkills[1])
+  localStorage.setItem('occupationSkill3', occupationSkills[2])
+  localStorage.setItem('occupationSkill4', occupationSkills[3])
+  localStorage.setItem('occupationSkill5', occupationSkills[4])
+  localStorage.setItem('occupationSkill6', occupationSkills[5])
+  localStorage.setItem('occupationSkill7', occupationSkills[6])
+  localStorage.setItem('occupationSkill8', occupationSkills[7])
   location.href = 'building_character_4.html'
 })
 

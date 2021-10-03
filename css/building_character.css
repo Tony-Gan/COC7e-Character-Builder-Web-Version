@@ -293,3 +293,10 @@ button:disabled {
   color: greenyellow;
   font-weight: 700;
 }
+
+/* Step 4 */
+
+#step4 section {
+  display: flex;
+  flex-direction: row;
+}
